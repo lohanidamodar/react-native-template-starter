@@ -6,9 +6,12 @@ $`react-native init --template starter <new project name>`
 
 ### Things to do after init
 
-1. Install dev dependencies. Run `node scripts/postInit.js`
-2. Examine `.env` files for react-native-config
-3. Finish splash screen installation [as instructed](https://github.com/crazycodeboy/react-native-splash-screen#third-stepplugin-configuration)
+1. Run `node scripts/postInit.js` It will:
+  - Install dev dependencies
+  - Replace appKey in index files
+2. Finish splash screen installation [as instructed](https://github.com/crazycodeboy/react-native-splash-screen#third-stepplugin-configuration)
+3. Examine `.env` files for react-native-config
+4. Run new app
 
 ### Things included
 - [Reactotron](https://github.com/infinitered/reactotron#documentation) for development

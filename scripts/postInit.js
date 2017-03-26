@@ -12,8 +12,26 @@ function installDevDependencies() {
     const depVersion = devDependencies[depName];
     const depToInstall = depName + '@' + depVersion;
     console.log('Adding ' + depToInstall + '...');
-    execSync(`yarn add ${depToInstall}`, {stdio: 'inherit'});
+    execSync(`yarn add ${depToInstall} -D`, {stdio: 'inherit'});
   }
+}
+
+function replaceAppKey() {
+  execSync(`yarn add replace-in-file -D`, {stdio: 'inherit'});
+
+  const appJsonPath = path.resolve('app.json');
+  const appName = JSON.parse(fs.readFileSync(appJsonPath)).name;
+
+  const replace = require('replace-in-file');
+
+  replace.sync({
+    files: [
+      path.resolve('index.android.js'),
+      path.resolve('index.ios.js'),
+    ],
+    from: 'react-native-template-starter',
+    to: appName
+  });
 }
 
 function cleanup() {
@@ -23,6 +41,7 @@ function cleanup() {
 
 function postTemplateInit() {
   installDevDependencies();
+  replaceAppKey();
   cleanup();
 }
 
