@@ -1,4 +1,23 @@
 {
 	"name": "react-native-template-starter",
-	"version": "0.0.1"
+	"version": "0.0.1",
+	"description": "Personal react-native starter template",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/doomsower/react-native-template-starter.git"
+	},
+	"keywords": [
+		"react",
+		"react-native",
+		"template",
+		"starter",
+		"boilerplate",
+		"kit"
+	],
+	"author": "Konstantin Kuznetsov",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/doomsower/react-native-template-starter/issues"
+	},
+	"homepage": "https://github.com/doomsower/react-native-template-starter#readme"
 }
