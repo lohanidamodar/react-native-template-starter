@@ -4,6 +4,11 @@ This is WIP, as I need to init and grow more than one project using this.
 
 $`react-native init --template starter <new project name>`
 
+This requires react-native **0.43** or higher, so for now it is 
+
+$`react-native init --version="0.43.0-rc.4" --template starter <new project name>`
+
+
 ### Things to do after init
 
 1. Run `node scripts/postInit.js` It will:
